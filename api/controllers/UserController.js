@@ -6,6 +6,8 @@ module.exports = {
       success: true,
     });
   },
+
+  
   login: async (req, res) => {
     const user = await Users.findOne({ email: req.body.email });
     if (!user || user.password !== req.body.password) {
